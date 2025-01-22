@@ -1,0 +1,14 @@
+setenv serverip 192.168.1.19
+
+setenv loadFromFAT \
+"if mmc dev;then run chckFilemmc; else run ldFromTFTP; fi"
+
+setenv chckFilemmc \
+"if fatload mmc 0:1 0xc100000 img;then echo LockedandLoaded!; else run ldFromTFTP; fi"
+
+setenv ldFromTFTP \
+"if tftp 0xc100000 img;then echo LockedandLoaded!; else echo 404; fi "
+
+setenv bootcmd "run loadFromFAT"
+
+saveenv 
