@@ -2,9 +2,11 @@ ENTRY(_start)
 
 SECTIONS
 {
-    . = 0x80000;
+    . = 0x8000;
+    _start = .;
     
     .text ALIGN(4) : {
+        KEEP(*(.init))
         *(.text)
         *(.rodata)
     }

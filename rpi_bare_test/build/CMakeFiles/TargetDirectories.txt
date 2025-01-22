@@ -1,0 +1,3 @@
+/home/fazloka/ITI/EmbLinux/EmbeddedLinuxKitchen/rpi_bare_test/build/CMakeFiles/led.dir
+/home/fazloka/ITI/EmbLinux/EmbeddedLinuxKitchen/rpi_bare_test/build/CMakeFiles/edit_cache.dir
+/home/fazloka/ITI/EmbLinux/EmbeddedLinuxKitchen/rpi_bare_test/build/CMakeFiles/rebuild_cache.dir
