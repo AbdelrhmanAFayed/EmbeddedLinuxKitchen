@@ -7,20 +7,18 @@ This directory contains the following scripts:
 ## `U-BOOT Scripts`
 
 - **Description**: These scripts are intended to configure and build U-boot depending on the desired config.
-- **Future Plan**: Make one script that takes input from user and based on that choose from custom config files rather than the current approach of having seperate a script for each target that just chooses from the pre-made u-boot configs and open menuconfig and waits for to finsh configration and then builds using the appropiate toolchain.
 
-### `vex_cfg_u_boot.sh`
+### `u_boot.sh`
 
-- **Description**: loads the pre-made config vexpress_ca9x4_defconfig and then open menuconfig and then builds u-boot.
+- **Description**: configures and then builds u-boot.
 
 ## `Linux Scripts`
 
 - **Description**: These scripts are intended to configure and build Linux depending on the desired config.
-- **Future Plan**: Make one script that takes input from user and based on that choose from custom config files rather than the current approach of having seperate a script for each target that just chooses from the pre-made Linux configs and open menuconfig and waits for to finsh configration and then builds using the appropiate toolchain.
 
-### `vex_cfg_linux.sh`
+### `linux.sh`
 
-- **Description**: loads the pre-made config vexpress_defconfig and then open menuconfig and then builds the linux kernel.
+- **Description**: configures and then builds the linux kernel.
 
 ## `QEMU Scripts`
 
