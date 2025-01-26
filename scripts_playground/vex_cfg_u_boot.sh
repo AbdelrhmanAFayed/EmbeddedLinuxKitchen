@@ -28,6 +28,9 @@ make vexpress_ca9x4_defconfig || { echo "make vexpress_ca9x4_defconfig failed"; 
 echo "Running make menuconfig..."
 make menuconfig || { echo "make menuconfig failed"; exit 1; }
 
+echo "Running make"
+make -j14 || { echo "make failed"; exit 1; }
+
 echo "Script completed successfully."
 
 

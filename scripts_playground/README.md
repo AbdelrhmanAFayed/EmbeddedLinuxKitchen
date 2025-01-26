@@ -7,25 +7,30 @@ This directory contains the following scripts:
 ## `U-BOOT Scripts`
 
 - **Description**: These scripts are intended to configure and build U-boot depending on the desired config.
-- **Future Plan**: Make one script that takes input from user and based on that choose from custom config files rather than the current approach of having seperate a script for each target that just chooses from the pre-mad u-boot configs and open menuconfig and waits for to finsh configration and then a seperate script to build for each target using the appropiate toolchain.
+- **Future Plan**: Make one script that takes input from user and based on that choose from custom config files rather than the current approach of having seperate a script for each target that just chooses from the pre-made u-boot configs and open menuconfig and waits for to finsh configration and then builds using the appropiate toolchain.
 
 ### `vex_cfg_u_boot.sh`
 
-- **Description**: loads the pre-made config vexpress_ca9x4_defconfig and then open menuconfig.
+- **Description**: loads the pre-made config vexpress_ca9x4_defconfig and then open menuconfig and then builds u-boot.
 
-### `vex_build_u_boot.sh`
+## `Linux Scripts`
 
-- **Description**: exports the required toolchain for the vexpress and starts building u-boot.
+- **Description**: These scripts are intended to configure and build Linux depending on the desired config.
+- **Future Plan**: Make one script that takes input from user and based on that choose from custom config files rather than the current approach of having seperate a script for each target that just chooses from the pre-made Linux configs and open menuconfig and waits for to finsh configration and then builds using the appropiate toolchain.
+
+### `vex_cfg_linux.sh`
+
+- **Description**: loads the pre-made config vexpress_defconfig and then open menuconfig and then builds the linux kernel.
 
 ## `QEMU Scripts`
 
 - **Description**: These scripts are intended to run QEMU depending on the desired target and desired outcome.
 - **Future Plan**: Make one script that takes input from user and based on that choose from available targets and behaviours rather than the current approach of having seperate a script for each target and each desired behaviour and to be able to run multiple process (for example a script that both runs qemu and then handles the virtual networking config to be able to use it).
 
-### `qemu_vex_uboot.sh`
+### `qemu_vex.sh`
 
 - **Description**: runs u-boot on qemu for vexpress-a9 target in a new terminal.
 
-### `qemu_vex_uboot_debug.sh`
+### `qemu_vex_debug.sh`
 
 - **Description**: runs u-boot on qemu for vexpress-a9 target in a new terminal but with the added options -S -s for debugging.
