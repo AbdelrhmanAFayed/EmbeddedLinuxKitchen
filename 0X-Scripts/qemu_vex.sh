@@ -26,3 +26,5 @@ if [ $? -eq 0 ]; then
 else
     echo "Failed to configure IP address."
 fi
+
+
