@@ -1,0 +1,12 @@
+::sysinit:mount -t sysfs sysfs /sys
+::sysinit:mount -t devtmpfs devtmpfs /dev
+::sysinit:mount -t proc proc /proc
+::wait:ls
+::wait:mkdir -p rootfs
+::wait::ls /dev
+::wait:sleep 10
+::wait:mount -t ext4 /dev/sda2 /rootfs
+::wait:chroot rootfs
+::wait:ls
+console::askfirst:/bin/sh
+
