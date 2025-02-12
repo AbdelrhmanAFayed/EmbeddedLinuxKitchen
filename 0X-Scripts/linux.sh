@@ -19,7 +19,7 @@ choose_target() {
             ;;
         2)
             TARGET="rpi3b+"
-            DEFCONFIG="bcm2837_defconfig"
+            DEFCONFIG="bcmrpi3_defconfig"
             TOOLCHAIN="/bin/aarch64-linux-gnu-"
             ARCH="arm64"
             ;;
@@ -60,7 +60,7 @@ build_project() {
     build_choice=${build_choice:-y}  # Default to 'y' if Enter is pressed
     if [[ $build_choice == "y" || $build_choice == "Y" ]]; then
         echo "Running make....."
-        make -j14 zImage modules dtbs || { echo "make failed"; exit 1; }
+        make -j14  || { echo "make failed"; exit 1; }
     fi
 }
 
